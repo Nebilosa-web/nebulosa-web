@@ -1,0 +1,112 @@
+.u-responsiveGrid {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.u-responsiveFlexbox {
+  display: flex;
+  flex-wrap: wrap;
+  &>* {
+    flex: 1 1 200px;
+  }
+}
+
+.u-message {
+  font-size: 4vw;
+  font-weight: bold;
+  text-align: center;
+  @include mq(m) {
+    font-size: 1.5rem;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.u-none {
+  display: none;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  top: 80%;
+  right: 2%;
+  z-index: 9999;
+  img {
+    width: 4rem;
+  }
+}
+
+.mobile-none {
+  display: none;
+  @include mq(m) {
+    display: block;
+  }
+}
+
+.icon {
+  width: 7rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-auto {
+  width: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  /* Tamaño del scroll en vertical */
+  height: 8px;
+  /* Tamaño del scroll en horizontal */
+  display: none;
+  /* Ocultar scroll */
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+
+::-webkit-scrollbar-thumb {
+  background: $secondColor;
+  border-radius: 4px;
+}
+
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: $secondColor;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Cambiamos el fondo cuando esté en active */
+
+::-webkit-scrollbar-thumb:active {
+  background-color: $secondColor;
+}
+
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+
+::-webkit-scrollbar-track {
+  background: $mainColor;
+  border-radius: 4px;
+}
+
+
+/* Cambiamos el fondo cuando esté en active o hover */
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: $mainColor;
+}
+
+.loading-icon {
+  width: 150px;
+}

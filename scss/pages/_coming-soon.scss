@@ -1,0 +1,55 @@
+.coming-soon {
+  background-image: url('assets/images/bg-coming-soon.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  @include mq(xl) {
+    padding-top: 100px;
+  }
+  &__logo {
+    text-align: center;
+    img {
+      width: auto;
+      @include mq(xl) {
+        width: 399px;
+        height: 102px;
+      }
+    }
+    margin-bottom: 1rem;
+  }
+  &__title {
+    h1 {
+      font-weight: 300;
+      font-size: 40px;
+      line-height: var(--lineHeightHeading);
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.5625rem;
+      @include mq(m) {
+        font-size: 60px;
+      }
+      @include mq(l) {
+        font-size: 80px;
+        margin-bottom: 3rem;
+      }
+      span {
+        background: linear-gradient(0deg, #FFF730 -6.67%, #FFFFFF 66.67%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        b {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &__images {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    &__img {
+      width: auto;
+    }
+  }
+}

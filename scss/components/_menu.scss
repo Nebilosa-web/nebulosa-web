@@ -1,0 +1,129 @@
+.header {
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    width: 100%;
+    background-color: var(--mainColor);
+    @include mq(s) {
+      padding: .5rem 2.5rem;
+      margin-top: 0;
+    }
+    @include mq(m) {
+      padding: .5rem 1.5rem;
+      margin-top: 0;
+    }
+    @include mq(l) {
+      background-color: transparent;
+    }
+    @include mq(xl) {
+      padding: 1.5rem 5% 0 5%;
+      margin-top: 0;
+    }
+    &.--scroll {
+      background-color: var(--mainColor);
+      width: 100%;
+      margin-top: 0;
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18);
+      @include mq(m) {
+        padding: .5rem 1.5rem;
+      }
+      @include mq(xl) {
+        padding: 1rem 5% 1rem 5%;
+      }
+    }
+    &__brand {
+      display: flex;
+      align-items: center;
+      flex: 2;
+      @include mq(s) {
+        flex: 1;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        @include mq(l) {
+          font-size: 2rem;
+        }
+        img {
+          width: 80%;
+          @include mq(s) {
+            width: 100%;
+            max-width: 285px;
+          }
+        }
+      }
+    }
+    &__btn {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 35px;
+      }
+      @include mq(l) {
+        display: none;
+      }
+    }
+    &__menu {
+      margin-top: -124vw;
+      width: 100%;
+      text-align: center;
+      transition: all .6s ease;
+      z-index: -111;
+      align-self: center;
+      &.is-active {
+        margin-top: 0;
+      }
+      @include mq(s) {
+        margin-top: -110vw;
+      }
+      @include mq(l) {
+        flex: 2;
+        width: auto;
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      li {
+        list-style: none;
+        padding: 10px 0;
+        @include mq(xl) {
+          padding-left: 1rem;
+        }
+      }
+      a {
+        padding: .5rem 1.5rem;
+        color: var(--white);
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        &.active {
+          color: var(--white);
+          background-color: var(--secondColor);
+        }
+        &:hover {
+          color: var(--secondColor);
+        }
+        @include mq(m) {
+          padding: 0 0 0 1.5rem;
+        }
+      }
+    }
+  }
+  &.--coming-soon,
+  &.--not-found {
+    display: none;
+  }
+}
