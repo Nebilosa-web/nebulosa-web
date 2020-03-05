@@ -1,129 +1,181 @@
-.header {
-  background-color: var(--mainColor);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5rem 1rem;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    z-index: 1030;
+@mixin transition {
+  @for $i from 1 through 50 {
+    &:nth-child(#{$i}) {
+      transition: transform 1s #{$i * .08}s cubic-bezier(.29, 1.4, .44, .96);
+    }
+  }
+}
+
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
+
+$main: $mainColor;
+$text: #FEFEFE;
+$contrast: darken($main, 10%);
+.drawer-list {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  transform: translate(100vw, 0);
+  /* ie workaround */
+  -ms-transform: translatex(-100vw);
+  box-sizing: border-box;
+  pointer-events: none;
+  padding-top: 125px;
+  transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease;
+  border-bottom-left-radius: 100vw;
+  z-index: 999;
+  @include alpha-attribute('background-color', rgba($contrast, 0.8), white);
+  @media (min-width: 768px) {
+    width: 40vw;
+  }
+  ul {
+    height: 100%;
     width: 100%;
-    background-color: var(--mainColor);
-    @include mq(s) {
-      padding: .5rem 2.5rem;
-      margin-top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    pointer-events: auto;
+  }
+  li {
+    list-style: none;
+    text-transform: uppercase;
+    pointer-events: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transform: translatex(100vw);
+    /* ie workaround */
+    -ms-transform: translatex(-100vw);
+    &:last-child {
+      margin-bottom: 2em;
     }
-    @include mq(m) {
-      padding: .5rem 1.5rem;
-      margin-top: 0;
-    }
-    @include mq(l) {
-      background-color: transparent;
-    }
-    @include mq(xl) {
-      padding: 1.5rem 5% 0 5%;
-      margin-top: 0;
-    }
-    &.--scroll {
-      background-color: var(--mainColor);
-      width: 100%;
-      margin-top: 0;
-      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18);
-      @include mq(m) {
-        padding: .5rem 1.5rem;
-      }
-      @include mq(xl) {
-        padding: 1rem 5% 1rem 5%;
-      }
-    }
-    &__brand {
-      display: flex;
-      align-items: center;
-      flex: 2;
-      @include mq(s) {
-        flex: 1;
-      }
-      a {
-        display: flex;
-        align-items: center;
-        @include mq(l) {
-          font-size: 2rem;
-        }
-        img {
-          width: 80%;
-          @include mq(s) {
-            width: 100%;
-            max-width: 285px;
-          }
-        }
-      }
-    }
-    &__btn {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      img {
-        width: 35px;
-      }
-      @include mq(l) {
-        display: none;
-      }
-    }
-    &__menu {
-      margin-top: -124vw;
-      width: 100%;
+    a {
+      text-decoration: none;
+      color: $text;
       text-align: center;
-      transition: all .6s ease;
-      z-index: -111;
-      align-self: center;
-      &.is-active {
-        margin-top: 0;
+      display: block;
+      padding: 1rem;
+      font-size: calc(24px - .5vw);
+      @media (min-width: 768px) {
+        text-align: right;
+        padding: .5rem;
       }
-      @include mq(s) {
-        margin-top: -110vw;
-      }
-      @include mq(l) {
-        flex: 2;
-        width: auto;
-        margin-top: 0;
-        display: flex;
-        justify-content: flex-end;
-      }
-      li {
-        list-style: none;
-        padding: 10px 0;
-        @include mq(xl) {
-          padding-left: 1rem;
-        }
-      }
-      a {
-        padding: .5rem 1.5rem;
-        color: var(--white);
-        text-transform: uppercase;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        &.active {
-          color: var(--white);
-          background-color: var(--secondColor);
-        }
-        &:hover {
-          color: var(--secondColor);
-        }
-        @include mq(m) {
-          padding: 0 0 0 1.5rem;
-        }
+      &:hover {
+        cursor: pointer;
+        @include alpha-attribute('background-color', rgba($main, 0.5), white);
       }
     }
   }
-  &.--coming-soon,
-  &.--not-found {
-    display: none;
+}
+
+input.hamburger {
+  display: none;
+  &:checked {
+    &~.drawer-list {
+      transform: translatex(0);
+      border-bottom-left-radius: 0;
+      li {
+        transform: translatex(0);
+        @include transition;
+        a {
+          padding-right: 15px;
+        }
+      }
+    }
+    &~label {
+      >i {
+        background-color: transparent;
+        transform: rotate(90deg);
+        &:before {
+          transform: translate(-50%, -50%) rotate(315deg);
+        }
+        &:after {
+          transform: translate(-50%, -50%) rotate(-315deg);
+        }
+      }
+      close {
+        color: $text;
+        width: 100%;
+      }
+      open {
+        color: rgba(0, 0, 0, 0);
+        width: 0;
+      }
+    }
+  }
+}
+
+label.hamburger {
+  z-index: 9999;
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+  >i {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    background-color: $text;
+    pointer-events: auto;
+    transition-duration: .35s;
+    transition-delay: .35s;
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      left: 50%;
+      background-color: $text;
+      content: "";
+      transition: transform 0.35s;
+      transform-origin: 50% 50%;
+    }
+    &:before {
+      transform: translate(-50%, -14px);
+    }
+    &:after {
+      transform: translate(-50%, 14px);
+    }
+  }
+}
+
+label.hamburger {
+  float: right;
+}
+
+.icon {
+  display: inline-block;
+  width: 5vw;
+  height: 4vw;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.menu-footer {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    li {
+      padding: 0 1rem;
+      a {
+        color: $secondColor;
+      }
+    }
   }
 }

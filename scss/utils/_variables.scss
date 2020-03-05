@@ -1,6 +1,6 @@
 /* ********** Custom Properties ********** */
 
-@import "https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap";
+@import "https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap";
 $secondColor: #ea1d6f;
 $Adam-Barnes-Cover-2-hex: #3E518C;
 $Adam-Barnes-Cover-3-hex: #324373;
@@ -53,12 +53,12 @@ $Adam-Barnes-Cover-5-hsla: hsla(225, 25, 66, 1);
   --lineHeight: 1.6;
   --white: #FFFFFF;
   --black: #000000;
-  --mainColor: #96359E;
+  --mainColor: #5752D9;
   --main-color-hover: #363c63;
-  --secondColor: #FFE983;
+  --secondColor: #BF0A4C;
   --second-color-hover: #0445af;
-  --alternateColor: #939EBF;
-  --footerColorBg: #0B0315;
+  --alternateColor: #1D2059;
+  --alternateColorTwo: #BF5517;
   --bg-color: var(--mainColor);
   --bg-modal-color: var(--main-modal-color);
   --bg-alternate-color: #999;
@@ -71,20 +71,16 @@ $Adam-Barnes-Cover-5-hsla: hsla(225, 25, 66, 1);
   --max-width: 1200px;
   --header-height: 5rem;
   --textColor: var(--black);
-   /* floated labels */
-   --inputPaddingV: var(--gutterMd);
-   --inputPaddingH: var(--gutterLg);
-   --inputFontSize: var(--fontSizeLg);
-   --inputLineHeight: var(--lineHeightMd);
-   --labelScaleFactor: 0.8;
-   --labelDefaultPosY: 50%;
-   --labelTransformedPosY: calc(
-     (var(--labelDefaultPosY)) - 
-     (var(--inputPaddingV) * var(--labelScaleFactor)) - 
-     (var(--inputFontSize) * var(--inputLineHeight))
-   );
-   --inputTransitionDuration: var(--transitionDuration);
-   --inputTransitionTF: var(--transitionTF);
+  /* floated labels */
+  --inputPaddingV: var(--gutterMd);
+  --inputPaddingH: var(--gutterLg);
+  --inputFontSize: var(--fontSizeLg);
+  --inputLineHeight: var(--lineHeightMd);
+  --labelScaleFactor: 0.8;
+  --labelDefaultPosY: 50%;
+  --labelTransformedPosY: calc( (var(--labelDefaultPosY)) - (var(--inputPaddingV) * var(--labelScaleFactor)) - (var(--inputFontSize) * var(--inputLineHeight)));
+  --inputTransitionDuration: var(--transitionDuration);
+  --inputTransitionTF: var(--transitionTF);
 }
 
 
@@ -93,13 +89,13 @@ $Adam-Barnes-Cover-5-hsla: hsla(225, 25, 66, 1);
 $breakpoints: ( xs: 30em,
 /* 480 / 16  */
 
-s: 37.5em,
+s: 36em,
 /* 600 / 16  */
 
-m: 45em,
+m: 48em,
 /* 720 / 16 */
 
-l: 64em,
+l: 62em,
 /* 1024 / 16 */
 
 xl: 75em

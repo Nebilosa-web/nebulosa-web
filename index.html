@@ -11,152 +11,212 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
 
     <div class="container">
 
-      <div class="menu">
+      <div class="row align-items-center">
 
-        <div class="menu__logo">
-          <img src="" alt="">
+        <div class="col-10 col-lg-6">
+
+          <div class="header__logo">
+            <a href="index.html"><img src="images/logo-nebulosa.png" alt="logo de nebulosa web"> nebulosa web</a>
+          </div>
+
         </div>
 
-        <nav class="menu__nav">
-          <ul>
-            <li><a href="index.html">Inico</a></li>
-            <li> <a href="nosotros.html">Nosotros</a> </li>
-            <li> <a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-
-        </nav>
-
+        <div class="col-2 col-lg-6">
+          <input id="hamburger" class="hamburger" type="checkbox" />
+          <label class="hamburger" for="hamburger">
+            <i></i>
+          </label>
+          <nav class="drawer-list">
+            <ul>
+              <li>
+                <a>Inico</a>
+              </li>
+              <li>
+                <a href="nosotros.html">Nosotros</a>
+              </li>
+              <li>
+                <a href="servicios.html">Servicios</a>
+              </li>
+              <li>
+                <a href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-    </div>
-
-    <div class="hero-image">
-      <div class="hero-image__text">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h1>
-
-        <a class="btn" href="servicios.html"> servicos</a>
-      </div>
     </div>
 
   </header>
 
-
   <main>
 
-    <section class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <img src="" alt="">
-          </div>
-
-          <div class="col-12 col-md-6">
-            <div class="section__text">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vero, soluta maxime id, eligendi quasi deleniti, ipsa aliquid itaque consequatur rerum modi dolor porro iure minima eveniet officia vel architecto!
-              </p>
-            </div>
-          </div>
+    <section>
+      <div class="hero-image">
+        <div id="particles-js"></div>
+        <div class="hero-image__content">
+          <h1 class="hero-image__title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h1>
+          <a class="btn" href="servicios.html"> servicios</a>
         </div>
       </div>
     </section>
 
-
-    <section class="section">
+    <section class="section my-4 my-lg-5">
       <div class="container">
-        <div class="row">
+
+        <div class="row ">
           <div class="col-12">
-            <h2 class="section__title">Servicos</h2>
+            <h2 class="texts__title mb-3 mb-lg-5">Nosotros</h2>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="section__icon-text">
-              <img src="" alt="">
-              <h3>Desarrollo Web</h3>
-              <p>
+        <div class="row d-flex align-items-center">
+          <div class="col-12 col-md-5">
+            <p class="texts__paragraphs">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vero, soluta maxime id, eligendi quasi deleniti, ipsa aliquid itaque consequatur rerum modi dolor porro iure minima eveniet officia vel architecto!
+            </p>
+          </div>
+
+          <div class="col-12 col-md-7">
+            <img class="images" src="images/equipo.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mb-lg-5">
+      <div class="container">
+        <div class="row ">
+          <div class="col-12">
+            <h2 class="texts__title mb-4">Servicios</h2>
+          </div>
+        </div>
+
+
+        <div class="row align-items-center mb-5 mb-lg-0">
+          <div class="col-12 col-md-6">
+            <img class="images mb-4 " src="images/desarrollo-web.jpg" alt="icono de desarrolo web">
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div>
+
+              <h3 class="texts__sub-title mb-4">Desarrollo Web</h3>
+              <p class="texts__paragraphs mb-4 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quod et rem aspernatur incidunt repudiandae reprehenderit a, beatae inventore doloremque corporis fugiat ipsum enim illo quidem omnis ut sit quaerat?
               </p>
+              <a class="btn" href="servicios.html"> ver mas</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center  mb-5 mb-lg-0">
+          <div class="col-12 col-md-6">
+            <div>
+              <h3 class="texts__sub-title mb-4">Diseño grafico</h3>
+              <p class="texts__paragraphs mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quod et rem aspernatur incidunt repudiandae reprehenderit a, beatae inventore doloremque corporis fugiat ipsum enim illo quidem omnis ut sit quaerat?
+              </p>
+              <a class="btn" href="servicios.html"> ver mas</a>
             </div>
           </div>
 
-          <div class="col-12 col-md-4">
-            <div class="section__icon-text">
-              <img src="" alt="">
-              <h3>Marketing</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quod et rem aspernatur incidunt repudiandae reprehenderit a, beatae inventore doloremque corporis fugiat ipsum enim illo quidem omnis ut sit quaerat?
-              </p>
-            </div>
+          <div class="col-12 col-md-6">
+            <img class="images mt-5 mt-lg-0" src="images/diseno-grafico.jpg" alt="icono de desarrolo web">
           </div>
+        </div>
 
-          <div class="col-12 col-md-4">
-            <div class="section__icon-text">
-              <img src="" alt="">
-              <h3>Gestion de redes sociale</h3>
-              <p>
+        <div class="row align-items-center  mb-5 mb-lg-0">
+          <div class="col-12 col-md-6">
+            <img class="images mb-4 " src="images/marketing.jpg" alt="icono de desarrolo web">
+          </div>
+          <div class="col-12 col-md-6">
+            <div>
+              <h3 class="texts__sub-title mb-4">Marketing</h3>
+              <p class="texts__paragraphs mb-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quod et rem aspernatur incidunt repudiandae reprehenderit a, beatae inventore doloremque corporis fugiat ipsum enim illo quidem omnis ut sit quaerat?
               </p>
+              <a class="btn" href="servicios.html"> ver mas</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section mb-5">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="section__icon-text-row">
-              <img src="" alt="">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas voluptas vitae rerum, animi sapiente a odio ipsum nisi pariatur qui nesciunt iste molestias debitis itaque, sed reiciendis recusandae cum adipisci.</p>
+        <div class="row ">
+          <div class="col-12 text-center">
+            <h2 class="texts__title mb-4">Razones para elegirnos</h2>
+            <p class="texts__paragraphs mb-0">Cuidamos de ti y tus proyectos, con un flujo de trabajo claro y estructurado. Esto es lo que te ofrezco si contratas mis servicios. </p>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card mb-4 mb-lg-0">
+              <div class="card__image-container">
+                <img class="card__image" src="images/lluvia-de-ideas.jpg" alt="">
+              </div>
+
+              <div class="card__content">
+                <h1 class="card__title">Lluvia de ideas</h1>
+                <p>En lugar de comenzar de inmediato, me tomo tiempo para elegir conceptos e ideas que podamos iterar juntos. Una vez que logramos un concepto, éste será el eje principal para empezar.</p>
+              </div>
             </div>
           </div>
 
-          <div class="col-12 col-md-6">
-            <div class="section__icon-text-row">
-              <img src="" alt="">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas voluptas vitae rerum, animi sapiente a odio ipsum nisi pariatur qui nesciunt iste molestias debitis itaque, sed reiciendis recusandae cum adipisci.</p>
+          <div class="col-12 col-md-6 col-lg-4">
+
+            <div class="card mb-4 mb-lg-0">
+              <div class="card__image-container">
+                <img class="card__image" src="images/preparacion.jpg" alt="">
+              </div>
+
+              <div class="card__content">
+                <h1 class="card__title">Preparación</h1>
+                <p>Dependiendo del tamaño y la naturaleza del proyecto, repaso una lista de las cosas que deben tratarse para garantizar un proyecto perfecto y sin contratiempos.</p>
+              </div>
             </div>
           </div>
 
-          <div class="col-12 col-md-6">
-            <div class="section__icon-text-row">
-              <img src="" alt="">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas voluptas vitae rerum, animi sapiente a odio ipsum nisi pariatur qui nesciunt iste molestias debitis itaque, sed reiciendis recusandae cum adipisci.</p>
-            </div>
-          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card mb-4 mb-lg-0">
+              <div class="card__image-container">
+                <img class="card__image" src="images/movil.jpg" alt="">
+              </div>
 
-          <div class="col-12 col-md-6">
-            <div class="section__icon-text-row">
-              <img src="" alt="">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas voluptas vitae rerum, animi sapiente a odio ipsum nisi pariatur qui nesciunt iste molestias debitis itaque, sed reiciendis recusandae cum adipisci.</p>
+              <div class="card__content">
+                <h1 class="card__title">Diseño adaptable</h1>
+                <p>Diseño adpatable para todo tipos de dispositivos como computadoras, table y telefonos.</p>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <footer>
+  <footer class="footer">
 
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4">
-          <img class="footer__logo" src="" alt="">
+        <div class="col-12 col-md-6">
+          <div class="header__logo">
+            <a href="index.html"><img src="images/logo-nebulosa.png" alt="logo de nebulosa web"> nebulosa web</a>
+          </div>
         </div>
 
-        <div class="col-12 col-md-4">
-          <nav class="menu__nav">
+        <div class="col-12 col-md-6">
+          <nav class="menu-footer">
             <ul>
               <li><a href="index.html">Inico</a></li>
               <li> <a href="nosotros.hmtl">Nosotros</a> </li>
@@ -166,33 +226,21 @@
           </nav>
         </div>
 
-        <div class="col-12 col-md-4">
-          <div class="footer__social-media">
-            <ul>
-              <li>
-                <a href=""><img src="" alt="">facebook</a>
-              </li>
-              <li>
-                <a href=""><img src="" alt="">instagram</a>
-              </li>
-              <li>
-                <a href=""><img src="" alt="">twitter</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
       </div>
 
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="footer__copy">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+          <p>Lorem ipsum dolor sit, amet <span class="footer-year"></span> consectetur adipisicing elit</p>
         </div>
       </div>
     </div>
 
   </footer>
 
+
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- stats.js lib -->
+  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

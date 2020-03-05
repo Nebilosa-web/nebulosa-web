@@ -1,0 +1,68 @@
+.header {
+  background-color: $mainColor;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 9999;
+  @include mq(l) {
+    position: fixed;
+    background-color: transparent;
+  }
+  &__logo {
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding-left: 10px;
+      @include mq(m) {
+        font-size: 30px;
+      }
+      &:hover {
+        color: $secondColor;
+      }
+    }
+    img {
+      width: 20%;
+      padding-right: 10px;
+      @include mq(m) {
+        width: 15%;
+      }
+    }
+  }
+  &.--scroll {
+    position: fixed;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    @include mq(l) {
+      background-color: $mainColor;
+    }
+  }
+}
+
+.header-pages {
+  background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    @include mq(l) {
+      font-size: 80px;
+    }
+    margin-bottom: 30px;
+  }
+}
+
+.header-pages .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, $secondColor 10%, $mainColor 100%);
+}

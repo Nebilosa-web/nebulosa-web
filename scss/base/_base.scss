@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: var(--mainFont), var(--alternateFont);
+  font-family: 'Comfortaa', cursive;
   font-size: var(--fontSize);
   line-height: var(--lineHeight);
   color: var(--text-color);
@@ -9,6 +9,9 @@ html {
     overflow-x: hidden;
     ul {
       list-style: none;
+    }
+    p {
+      font-weight: 400;
     }
     a {
       font-weight: bold;
@@ -37,13 +40,4 @@ html {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
-}
-
-button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background: none;
 }

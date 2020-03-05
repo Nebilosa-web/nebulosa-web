@@ -11,106 +11,127 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
 
     <div class="container">
 
-      <div class="menu">
+      <div class="row align-items-center">
 
-        <div class="menu__logo">
-          <img src="" alt="">
+        <div class="col-10 col-lg-6">
+
+          <div class="header__logo">
+            <a href="index.html"><img src="images/logo-nebulosa.png" alt="logo de nebulosa web"> nebulosa web</a>
+          </div>
+
         </div>
 
-        <nav class="menu__nav">
-          <ul>
-            <li><a href="index.html">Inico</a></li>
-            <li> <a href="nosotros.html">Nosotros</a> </li>
-            <li> <a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-
-        </nav>
-
+        <div class="col-2 col-lg-6">
+          <input id="hamburger" class="hamburger" type="checkbox" />
+          <label class="hamburger" for="hamburger">
+            <i></i>
+          </label>
+          <nav class="drawer-list">
+            <ul>
+              <li>
+                <a>Inico</a>
+              </li>
+              <li>
+                <a href="nosotros.html">Nosotros</a>
+              </li>
+              <li>
+                <a href="servicios.html">Servicios</a>
+              </li>
+              <li>
+                <a href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
-    </div>
-
-    <div class="hero-image --internal-pages">
-      <div class="hero-image__text">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h1>
-      </div>
     </div>
 
   </header>
 
-
   <main>
 
-    <section class="section">
+    <section class="header-pages">
+      <div class="overlay">
+        <h1>Servicios </h1>
+        <h3>Reasons for Choosing US</h3>
+      </div>
+    </section>
+
+    <section class="section my-5">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="section__text">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vero, soluta maxime id, eligendi quasi deleniti, ipsa aliquid itaque consequatur rerum modi dolor porro iure minima eveniet officia vel architecto!
-              </p>
-            </div>
+
+            <p class="texts__paragraphs text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vero, soluta maxime id, eligendi quasi deleniti, ipsa aliquid itaque consequatur rerum modi dolor porro iure minima eveniet officia vel architecto!
+            </p>
+
           </div>
         </div>
       </div>
     </section>
 
 
-    <section class="section">
+    <section class="section mb-lg-5">
       <div class="container">
+        <div class="row ">
+          <div class="col-12">
+            <h2 class="texts__title mb-4">Servicios</h2>
+          </div>
+        </div>
 
-        <div class="row">
+
+        <div class="row align-items-center mb-5 mb-lg-0">
           <div class="col-12 col-md-6">
-            <img src="" alt="">
+            <img class="images mb-4 " src="images/desarrollo-web.jpg" alt="icono de desarrolo web">
           </div>
 
           <div class="col-12 col-md-6">
-            <h2 class="section__sub-title">Desarrollo web</h2>
-            <div class="section__text">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vero, soluta maxime id, eligendi quasi deleniti, ipsa aliquid itaque consequatur rerum modi dolor porro iure minima eveniet officia vel architecto!
+            <div>
+
+              <h3 class="texts__sub-title mb-4">Desarrollo Web</h3>
+              <p class="texts__paragraphs mb-4 ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quod et rem aspernatur incidunt repudiandae reprehenderit a, beatae inventore doloremque corporis fugiat ipsum enim illo quidem omnis ut sit quaerat?
               </p>
+              <a class="btn" href="servicios.html"> ver mas</a>
             </div>
           </div>
         </div>
 
-        <div class="row">
-
+        <div class="row align-items-center  mb-5 mb-lg-0">
           <div class="col-12 col-md-6">
-            <h2 class="section__sub-title">Marketing</h2>
-            <div class="section__text">
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vero, soluta maxime id, eligendi quasi deleniti, ipsa aliquid itaque consequatur rerum modi dolor porro iure minima eveniet officia vel architecto!
+            <div>
+              <h3 class="texts__sub-title mb-4">Diseño grafico</h3>
+              <p class="texts__paragraphs mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quod et rem aspernatur incidunt repudiandae reprehenderit a, beatae inventore doloremque corporis fugiat ipsum enim illo quidem omnis ut sit quaerat?
               </p>
+              <a class="btn" href="servicios.html"> ver mas</a>
             </div>
           </div>
 
           <div class="col-12 col-md-6">
-            <img src="" alt="">
+            <img class="images mt-5 mt-lg-0" src="images/diseno-grafico.jpg" alt="icono de desarrolo web">
           </div>
         </div>
 
-        <div class="row">
+        <div class="row align-items-center  mb-5 mb-lg-0">
           <div class="col-12 col-md-6">
-            <img src="" alt="">
+            <img class="images mb-4 " src="images/marketing.jpg" alt="icono de desarrolo web">
           </div>
-
           <div class="col-12 col-md-6">
-            <div class="section__text">
-              <h2 class="section__sub-title">Community manager</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem vero, soluta maxime id, eligendi quasi deleniti, ipsa aliquid itaque consequatur rerum modi dolor porro iure minima eveniet officia vel architecto!
+            <div>
+              <h3 class="texts__sub-title mb-4">Marketing</h3>
+              <p class="texts__paragraphs mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, quod et rem aspernatur incidunt repudiandae reprehenderit a, beatae inventore doloremque corporis fugiat ipsum enim illo quidem omnis ut sit quaerat?
               </p>
+              <a class="btn" href="servicios.html"> ver mas</a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -118,16 +139,16 @@
 
   </main>
 
-  <footer>
+  <footer class="footer">
 
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4">
-          <img class="footer__logo" src="" alt="">
+        <div class="col-12 col-md-6">
+          <img class="footer__logo" src="" alt="logo de nebulosa web">
         </div>
 
-        <div class="col-12 col-md-4">
-          <nav class="menu__nav">
+        <div class="col-12 col-md-6">
+          <nav class="menu-footer">
             <ul>
               <li><a href="index.html">Inico</a></li>
               <li> <a href="nosotros.hmtl">Nosotros</a> </li>
@@ -137,27 +158,11 @@
           </nav>
         </div>
 
-        <div class="col-12 col-md-4">
-          <div class="footer__social-media">
-            <ul>
-              <li>
-                <a href=""><img src="" alt="">facebook</a>
-              </li>
-              <li>
-                <a href=""><img src="" alt="">instagram</a>
-              </li>
-              <li>
-                <a href=""><img src="" alt="">twitter</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
       </div>
 
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="footer__copy">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit</p>
+          <p>Lorem ipsum dolor sit, amet <span class="footer-year"></span> consectetur adipisicing elit</p>
         </div>
       </div>
     </div>

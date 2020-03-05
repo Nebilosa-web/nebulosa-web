@@ -1,0 +1,166 @@
+.progress {
+  background: $mainColor;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 100%;
+  &__icon {
+    img {
+      width: 50px;
+      margin-right: 1rem;
+    }
+  }
+  &__value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px $secondColor;
+    border-radius: 100px;
+    background: $secondColor;
+    height: 30px;
+    width: 0;
+    &.--html {
+      animation: html 3s normal forwards;
+    }
+    &.--css {
+      animation: css 3s normal forwards;
+    }
+    &.--js {
+      animation: js 3s normal forwards;
+    }
+    &.--php {
+      animation: php 3s normal forwards;
+    }
+    &.--photoshop {
+      animation: photoshop 3s normal forwards;
+    }
+    &.--illustrator {
+      animation: illustrator 3s normal forwards;
+    }
+    &.--wordpress {
+      animation: wordpress 3s normal forwards;
+    }
+    &.--angular {
+      animation: angular 3s normal forwards;
+    }
+    &.--node {
+      animation: node 3s normal forwards;
+    }
+    &.--sass {
+      animation: sass 3s normal forwards;
+    }
+    &.--git {
+      animation: git 3s normal forwards;
+    }
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes php {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes photoshop {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes illustrator {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes wordpress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes angular {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes node {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes sass {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes git {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.fa-html5 {
+  font-size: 50px;
+  margin-right: 1rem;
+  @include mq(l) {
+    font-size: 60px;
+    margin-right: 2rem;
+  }
+}

@@ -1,21 +1,48 @@
 .texts {
   &__title {
-    color: var(--mainColor);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 37px;
-    &.--about {
-      font-size: 20px;
-      line-height: 27px;
+    color: $secondColor;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 700;
+    @include mq(m) {
+      font-size: 45px;
+      line-height: 45px;
+    }
+  }
+  &__sub-title {
+    color: $secondColor;
+    margin-bottom: .5rem;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 25px;
+    @include mq(m) {
+      text-align: justify;
+    }
+    @include mq(l) {
+      margin: 0;
+      font-size: 28px;
+      line-height: 28px;
+    }
+    &.--center {
+      @include mq(m) {
+        text-align: center;
+      }
     }
   }
   &__paragraphs {
-    line-height: 33px;
-    font-style: normal;
-    font-weight: normal;
-    &.--about {
-      max-width: 815px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    @include mq(l) {
+      margin: 0;
+      font-size: 16px;
+    }
+    &.--center {
+      @include mq(m) {
+        text-align: center;
+      }
     }
   }
 }
