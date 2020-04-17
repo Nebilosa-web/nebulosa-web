@@ -1,6 +1,6 @@
 .texts {
   &__title {
-    color: $secondColor;
+    color: var(--mainColor);
     font-size: 35px;
     line-height: 35px;
     text-align: center;
@@ -11,7 +11,7 @@
     }
   }
   &__sub-title {
-    color: $secondColor;
+    color: var(--mainColor);
     margin-bottom: .5rem;
     text-align: center;
     font-size: 23px;

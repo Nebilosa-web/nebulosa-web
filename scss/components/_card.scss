@@ -1,7 +1,7 @@
 .our-team {
   padding: 30px 0 40px;
   margin-bottom: 30px;
-  background-color: $mainColor;
+  background-color: var(--alternateColor);
   text-align: center;
   overflow: hidden;
   position: relative;
@@ -30,7 +30,7 @@
       width: 100%;
       height: 0;
       border-radius: 50%;
-      background-color: $secondColor;
+      background-color: var(--secondColor);
       position: absolute;
       bottom: 135%;
       right: 0;
@@ -48,7 +48,7 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: $secondColor;
+      background-color: var(--secondColor);
       position: absolute;
       top: 0;
       left: 0;
@@ -56,7 +56,7 @@
     }
   }
   .name {
-    color: $secondColor;
+    color: var(--secondColor);
     margin-bottom: 1rem;
   }
   .title {
@@ -73,7 +73,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: $secondColor;
+    background-color: var(--secondColor);
     position: absolute;
     left: 0;
     transition: all 0.5s ease 0s;
@@ -87,7 +87,7 @@
         display: block;
         padding: 10px;
         font-size: 25px;
-        color: white;
+        color: var(--white);
         transition: all 0.3s ease 0s;
         text-decoration: none;
         @include mq(l) {
@@ -95,8 +95,8 @@
           margin: 5px 0;
         }
         &:hover {
-          color: $mainColor;
-          background-color: #ffffff;
+          color: var(--alternateColor);
+          background-color: var(--white);
           border-radius: 50%;
         }
       }
@@ -105,7 +105,7 @@
   &:hover {
     .picture {
       img {
-        box-shadow: 0 0 0 14px #ffffff;
+        box-shadow: 0 0 0 14px var(--white);
         transform: scale(0.7);
       }
       &:before {
@@ -146,6 +146,7 @@
     font-weight: 700;
     letter-spacing: 0.01em;
     font-size: 18px;
+    color: var(--mainColor);
   }
   &__content {
     margin-top: -1rem;

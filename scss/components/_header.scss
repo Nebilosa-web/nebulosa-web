@@ -1,5 +1,5 @@
 .header {
-  background-color: $mainColor;
+  background-color: var(--alternateColor);
   width: 100%;
   padding: 1rem 0;
   z-index: 9999;
@@ -14,11 +14,12 @@
       font-size: 20px;
       text-transform: uppercase;
       padding-left: 10px;
+      color: var(--secondColor);
       @include mq(m) {
         font-size: 30px;
       }
       &:hover {
-        color: $secondColor;
+        color: var(--secondColor);
       }
     }
     img {
@@ -33,7 +34,7 @@
     position: fixed;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     @include mq(l) {
-      background-color: $mainColor;
+      background-color: var(--alternateColor);
     }
   }
 }
@@ -49,7 +50,6 @@
   overflow: hidden;
   border-radius: 0 0 85% 85% / 30%;
   h1 {
-    font-family: 'Dancing Script', cursive;
     font-size: 40px;
     @include mq(l) {
       font-size: 80px;
@@ -64,5 +64,5 @@
   padding: 50px;
   color: #FFF;
   text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient( 135deg, $secondColor 10%, $mainColor 100%);
+  background-image: linear-gradient( 135deg, var(--alternateColor) 10%, var(--secondColor) 100%);
 }

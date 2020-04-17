@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: 'Comfortaa', cursive;
+  font-family: var(--mainFont), var(--alternateFont);
   font-size: var(--fontSize);
   line-height: var(--lineHeight);
   color: var(--text-color);

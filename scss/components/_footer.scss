@@ -1,12 +1,38 @@
 .footer {
   padding: 1rem 0;
-  background-color: $mainColor;
+  background-color: var(--alternateColor);
   @include mq(l) {
-    padding: 2rem;
+    padding: 4rem 0;
+  }
+  &__logo {
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding-left: 10px;
+      color: var(--secondColor);
+      @include mq(m) {
+        font-size: 25px;
+      }
+      &:hover {
+        color: var(--secondColor);
+      }
+    }
+    img {
+      width: 20%;
+      padding-right: 10px;
+      @include mq(m) {
+        width: 18%;
+      }
+    }
   }
   &__copy {
-    padding-top: 1rem;
-    color: $secondColor;
+    padding-top: 2rem;
+    color: var(--secondColor);
     text-align: center;
+  }
+  .footer-year {
+    color: var(--mainColor);
   }
 }

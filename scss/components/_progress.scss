@@ -1,5 +1,5 @@
 .progress {
-  background: $mainColor;
+  background: var(--alternateColor);
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
@@ -16,9 +16,9 @@
   }
   &__value {
     animation: load 3s normal forwards;
-    box-shadow: 0 10px 40px -10px $secondColor;
+    box-shadow: 0 10px 40px -10px var(--secondColor);
     border-radius: 100px;
-    background: $secondColor;
+    background: var(--secondColor);
     height: 30px;
     width: 0;
     &.--html {

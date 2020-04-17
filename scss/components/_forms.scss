@@ -1,6 +1,6 @@
 .screen {
   position: relative;
-  background: $mainColor;
+  background: var(--alternateColor);
   border-radius: 15px;
 }
 
@@ -36,7 +36,7 @@
   height: 8px;
   margin-right: 3px;
   border-radius: 8px;
-  background: white;
+  background: var(--white);
 }
 
 .screen-header-button.close {
@@ -81,7 +81,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  color: $secondColor;
+  color: var(--secondColor);
   font-size: 26px;
 }
 
